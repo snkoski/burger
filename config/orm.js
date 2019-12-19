@@ -42,7 +42,7 @@ var orm = {
         queryString += ") ";
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
-        querySTring += ") ";
+        queryString += ") ";
 
         console.log(queryString);
 
@@ -55,7 +55,7 @@ var orm = {
         });
     }, 
     updateOne: function(table, objColVals, condition, cb) {
-        var querySTring = "UPDATE " + table;
+        var queryString = "UPDATE " + table;
         
         queryString += " SET ";
         queryString += objToSql(objColVals);
@@ -63,7 +63,7 @@ var orm = {
         queryString += condition;
 
         console.log(queryString);
-        connection.query(querySTring, function(err, result) {
+        connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
             }
