@@ -26,8 +26,8 @@ function objToSql(ob) {
 }
 
 var orm = {
-    selectAll: function(tableInput, cb) {
-        var queryString = "SELECT * FROM " + tableInput + ";";
+    selectAll: function(table, cb) {
+        var queryString = "SELECT * FROM " + table + ";";
         connection.query(queryString, function(err, result){
             if (err) {
                 throw err;
@@ -42,7 +42,7 @@ var orm = {
         queryString += ") ";
         queryString += "VALUES (";
         queryString += printQuestionMarks(vals.length);
-        querySTring += ")";
+        querySTring += ") ";
 
         console.log(queryString);
 
