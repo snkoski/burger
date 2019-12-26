@@ -8,9 +8,10 @@ USE burgers_db;
 
 -- create table to index burgers
 CREATE TABLE burgers (
-    id int NOT NULL AUTO_INCREMENT,
+    id int AUTO_INCREMENT NOT NULL,
     burger_name VARCHAR(255) NOT NULL,
     devoured BOOLEAN,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
-);
+); 
 
