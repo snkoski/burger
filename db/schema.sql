@@ -11,7 +11,7 @@ CREATE TABLE burgers (
     id int AUTO_INCREMENT NOT NULL,
     burger_name VARCHAR(255) NOT NULL,
     devoured BOOLEAN,
-    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    createdAt TIMESTAMP,
     PRIMARY KEY (id)
 ); 
 
